@@ -1,0 +1,1051 @@
+/* ========================================
+   TÜRK MUTFAĞI - ANA STİL DOSYASI
+   Temel HTML/CSS ile yazılmıştır
+   ======================================== */
+
+/* ---------- GENEL SIFIRLAMA ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- HEADER / NAVİGASYON ---------- */
+.header {
+    background-color: #1a2332;
+    color: #fff;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo .logo-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #c0392b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.header-logo h1 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-logo span {
+    font-size: 11px;
+    color: #aaa;
+    display: block;
+    margin-top: -2px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-nav a {
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    color: #fff;
+}
+
+.header-search-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-search-btn:hover {
+    color: #fff;
+}
+
+/* ---------- HERO BÖLÜMÜ (ANA SAYFA) ---------- */
+.hero {
+    background: linear-gradient(rgba(26, 35, 50, 0.85), rgba(26, 35, 50, 0.85)),
+                url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1200') center/cover;
+    color: #fff;
+    padding: 60px 40px 50px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    max-width: 500px;
+}
+
+.hero p {
+    font-size: 14px;
+    color: #ccc;
+    max-width: 500px;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+/* ---------- ARAMA ÇUBUĞU ---------- */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 4px 4px 4px 16px;
+    max-width: 480px;
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0;
+    background: transparent;
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.search-bar button {
+    background-color: #1a2332;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #2c3e50;
+}
+
+/* ---------- İSTATİSTİKLER ---------- */
+.stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.stat-item strong {
+    font-size: 20px;
+    display: block;
+}
+
+.stat-item small {
+    font-size: 11px;
+    color: #ccc;
+}
+
+/* ---------- BÖLÜM BAŞLIKLARI ---------- */
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 20px;
+}
+
+/* ---------- ÖNE ÇIKAN LEZZETLER ---------- */
+.featured-section {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* ---------- YEMEK KARTI ---------- */
+.food-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.food-card-img {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.food-card-img .card-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: rgba(26, 35, 50, 0.8);
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.food-card-body {
+    padding: 12px;
+}
+
+.food-card-body h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #1a2332;
+}
+
+.food-card-body .card-location {
+    font-size: 12px;
+    color: #888;
+}
+
+.food-card-body .card-category {
+    font-size: 11px;
+    color: #aaa;
+    display: block;
+    margin-top: 2px;
+}
+
+/* ---------- YILDIZ DERECELENDİRME ---------- */
+.stars {
+    color: #f39c12;
+    font-size: 13px;
+    display: inline-flex;
+    gap: 1px;
+}
+
+.stars .empty {
+    color: #ddd;
+}
+
+.rating-text {
+    font-size: 12px;
+    color: #888;
+    margin-left: 6px;
+}
+
+/* ---------- BREADCRUMB ---------- */
+.breadcrumb {
+    padding: 12px 40px;
+    background-color: #fff;
+    font-size: 13px;
+    color: #888;
+    border-bottom: 1px solid #eee;
+}
+
+.breadcrumb a {
+    color: #3498db;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 6px;
+    color: #ccc;
+}
+
+/* ---------- İL SEÇİMİ SAYFASI ---------- */
+.city-selection {
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.city-selection h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.city-selection > p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Harita alanı */
+.map-container {
+    width: 100%;
+    height: 300px;
+    background-color: #e8e8e8;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+}
+
+/* Bölge etiketleri */
+.region-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.region-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.region-tab:hover,
+.region-tab.active {
+    background-color: #1a2332;
+    color: #fff;
+    border-color: #1a2332;
+}
+
+.region-tab .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* İl listesi */
+.city-list-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a2332;
+}
+
+.city-search {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+    max-width: 300px;
+}
+
+.city-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.city-grid a {
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.city-grid a:hover {
+    background-color: #1a2332;
+    color: #fff;
+    border-color: #1a2332;
+}
+
+.show-more-btn {
+    display: inline-block;
+    color: #3498db;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 4px 0;
+}
+
+.show-more-btn:hover {
+    text-decoration: underline;
+}
+
+/* ---------- İL DETAY SAYFASI ---------- */
+.city-hero {
+    background: linear-gradient(rgba(26, 35, 50, 0.7), rgba(26, 35, 50, 0.7)),
+                url('https://images.unsplash.com/photo-1609942000175-772022e33e0e?w=1200') center/cover;
+    color: #fff;
+    padding: 50px 40px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.city-hero h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.city-hero p {
+    font-size: 14px;
+    color: #ccc;
+    max-width: 500px;
+}
+
+.city-foods {
+    padding: 40px;
+}
+
+.city-foods .section-title {
+    margin-bottom: 24px;
+}
+
+.city-foods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* ---------- YEMEK DETAY SAYFASI ---------- */
+.food-detail {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.food-detail-top {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.food-detail-img {
+    width: 380px;
+    min-height: 280px;
+    background-color: #ddd;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.food-detail-info {
+    flex: 1;
+}
+
+.food-detail-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 4px;
+}
+
+.food-detail-info .food-origin {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.food-detail-info .food-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.food-detail-info .food-rating .rating-score {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a2332;
+}
+
+.food-detail-info .food-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Pişirme bilgileri */
+.cooking-info {
+    display: flex;
+    gap: 30px;
+    padding: 16px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.cooking-info-item {
+    text-align: center;
+}
+
+.cooking-info-item .info-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.cooking-info-item .info-label {
+    font-size: 11px;
+    color: #888;
+    display: block;
+}
+
+.cooking-info-item .info-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a2332;
+}
+
+/* Sekmeler */
+.detail-tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.detail-tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.3s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.detail-tab:hover,
+.detail-tab.active {
+    color: #1a2332;
+    border-bottom-color: #1a2332;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a2332;
+}
+
+.tab-content ul {
+    padding-left: 20px;
+}
+
+.tab-content ul li {
+    list-style: disc;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.tab-content ol {
+    padding-left: 20px;
+}
+
+.tab-content ol li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.print-btn {
+    display: inline-block;
+    background-color: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+    background-color: #a93226;
+}
+
+/* ---------- ARAMA SONUÇLARI SAYFASI ---------- */
+.search-page {
+    padding: 30px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.search-header {
+    margin-bottom: 24px;
+}
+
+.search-header .search-bar {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.search-results-info {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.search-results-info strong {
+    color: #1a2332;
+}
+
+.search-layout {
+    display: flex;
+    gap: 30px;
+}
+
+/* Filtre paneli */
+.filter-panel {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 10px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #555;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    accent-color: #1a2332;
+}
+
+/* Arama sonuç kartları */
+.search-results {
+    flex: 1;
+}
+
+.result-card {
+    display: flex;
+    gap: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+    padding: 16px;
+    transition: box-shadow 0.3s;
+}
+
+.result-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.result-card-img {
+    width: 120px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.result-card-body {
+    flex: 1;
+}
+
+.result-card-body h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 2px;
+}
+
+.result-card-body .result-location {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.result-card-body .result-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.result-card-link {
+    font-size: 13px;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.result-card-link:hover {
+    text-decoration: underline;
+}
+
+/* Sayfalama */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+}
+
+.pagination a,
+.pagination span {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #1a2332;
+    color: #fff;
+    border-color: #1a2332;
+}
+
+.pagination .active {
+    background-color: #1a2332;
+    color: #fff;
+    border-color: #1a2332;
+}
+
+.pagination .arrow {
+    font-size: 16px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background-color: #1a2332;
+    color: #aaa;
+    padding: 30px 40px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2c3e50;
+    margin-top: 24px;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+/* ---------- MOBIL UYUMLU TASARIM ---------- */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .header-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #1a2332;
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+        border-top: 1px solid #2c3e50;
+    }
+
+    .header-nav.open {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .hero {
+        padding: 40px 16px 30px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .featured-section {
+        padding: 24px 16px;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city-selection {
+        padding: 24px 16px;
+    }
+
+    .city-hero {
+        padding: 30px 16px;
+    }
+
+    .city-hero h2 {
+        font-size: 26px;
+    }
+
+    .city-foods {
+        padding: 24px 16px;
+    }
+
+    .city-foods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-detail {
+        padding: 24px 16px;
+    }
+
+    .food-detail-top {
+        flex-direction: column;
+    }
+
+    .food-detail-img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .cooking-info {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .search-page {
+        padding: 20px 16px;
+    }
+
+    .search-layout {
+        flex-direction: column;
+    }
+
+    .filter-panel {
+        width: 100%;
+    }
+
+    .result-card {
+        flex-direction: column;
+    }
+
+    .result-card-img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .breadcrumb {
+        padding: 10px 16px;
+    }
+}
+
+/* Masaüstünde mobil menü butonu gizle */
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* ---------- YARDIMCI SINIFLAR ---------- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
